@@ -6,7 +6,8 @@ const methodOverride = require("method-override");
 
 const app = express();
 
-mongoose.connect("mongodb://localhost/blogApp");
+const mongoDB = "mongodb://localhost/blogApp";
+mongoose.connect(mongoDB);
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
